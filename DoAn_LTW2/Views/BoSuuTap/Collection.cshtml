@@ -1,0 +1,68 @@
+﻿@model List<DoAn_LTW2.Models.product>
+@{
+    ViewBag.Title = "Collection";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/Content/collection.css" rel="stylesheet" />
+
+<div class="container box">
+    <div class="row">
+        <div class="col-3">
+            <img class="img-3" src="~/Content/hinhanh/Gazellered.jpg" alt="Gazelle" />
+            <p class="text-weight">Gazelle Originals</p>
+            <p>Đôi giày cổ thấp classic đã và đang chuyển động mạnh mẽ suốt hơn 70 năm qua.</p>
+            <a href="#" class="text-dark">MUA GIÀY GAZELLE</a>
+        </div>
+        <div class="col-3">
+            <img class="img-3" src="~/Content/hinhanh/adidassamba.jpg" alt="Gazelle" />
+            <p class="text-weight">Samba Originals</p>
+            <p>Biểu tượng của phong cách đường phố vẫn trung thành với di sản của mình - cả trong và ngoài sân cỏ</p>
+            <a href="#" class="text-dark">MUA GIÀY SAMBA</a>
+        </div>
+        <div class="col-3">
+            <img class="img-3" src="~/Content/hinhanh/adidassupertart.jpg" alt="Gazelle" />
+            <p class="text-weight">SuperStar Originals</p>
+            <p>Thiết kế nguyên bản đã thay đôi cuộc choi ngay khi vừa bước chân ra khỏi sân đấu</p>
+            <a href="#" class="text-dark">MUA GIÀY SUPERSTAR</a>
+        </div>
+        <div class="col-3">
+            <img class="img-3" src="~/Content/hinhanh/stanSmithgreen.jpg" alt="Gazelle" />
+            <p class="text-weight">Stan Smith Originals</p>
+            <p>Suốt hơn 50 năm,biểu tượng này vẫn luôn giữ vững vị trí của mình cả trên sân đấu và đường phố.</p>
+            <a href="#" class="text-dark">MUA GIÀY STAN SMITH</a>
+        </div>
+    </div>
+</div>
+
+@*danh sách sản phẩm*@
+<div class="container">
+
+    <a href="/BoSuuTap/Create" class="btn btn-success">Add new product  </a>
+    <h1 class="text-center">SẢN PHẨM NỔI BẬT</h1>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="~/Content/hinhanh/@item.image" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-secondary">@item.Price$</p>
+                        <h5 class="card-title"><a href="/BoSuuTap/Detail/@item.Id">@item.ProductName</a></h5>
+                        <p class="card-text">@item.Description</p>
+                        <div class="row">
+                            <div class="col">
+                                <a href="#" class="btn btn-primary">Mua ngay</a>
+                            </div>
+                            <div class="col">
+                                <div class="row"><a href="/BoSuuTap/Edit/@item.Id" class="text-secondary" style="text-decoration:none">Edit <i class="fa fa-edit"></i></a></div>
+                                <div class="row"><a href="/BoSuuTap/Delete/@item.Id" class="text-danger" style="text-decoration:none">Delete <i class="fas fa-trash-alt"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

@@ -1,0 +1,14 @@
+﻿.text-weight {
+    font-weight: bolder;
+}
+
+.box {
+    width: 100%;
+    height: 540px;
+}
+
+.img-3 {
+    width: 90%;
+    height: 70%;
+    object-fit: contain;
+}

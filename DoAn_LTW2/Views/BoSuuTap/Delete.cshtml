@@ -1,0 +1,26 @@
+﻿@model DoAn_LTW2.Models.product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete Product</h2>
+<form action="/BoSuuTap/Delete/@Model.Id" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <table class="table">
+        <tr>
+            <th>Product Name</th>
+            <td>@Model.ProductName</td>
+        </tr>
+        <tr>
+            <th>Product Price</th>
+            <td>@Model.Price</td>
+        </tr>
+    </table>
+    <div class="p-4">
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="/BoSuuTap/Collection" class="btn btn-danger">Cancel</a>
+    </div>
+</form>
+

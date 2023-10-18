@@ -1,0 +1,56 @@
+﻿@model DoAn_LTW2.Models.product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit Product</h2>
+<form action="/BoSuuTap/Edit/@Model.Id" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="image">Product Image</label>
+            <input type="file"
+                   class="form-control"
+                   id="image"
+                   value="@Model.image"
+                   name="image" placeholder="Product Price" />
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="ProductName">Product Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="ProductName"
+                   value="@Model.ProductName"
+                   name="ProductName" placeholder="Product Name" />
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="ProductName">Price</label>
+            <input type="number"
+                   class="form-control"
+                   id="Price"
+                   name="Price"
+                   value="@Model.Price" placeholder="Product Price" />
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="ProductName">Product Description</label>
+            <input type="text"
+                   class="form-control"
+                   id="Description"
+                   name="Description" value="@Model.Description" placeholder="Product Description" />
+        </div>
+    </div>
+    <div class="p-4">
+        <button type="submit" class="btn btn-success">Save</button>
+        <a href="/BoSuuTap/Collection" class="btn btn-danger">Cancel</a>
+    </div>
+</form>
+
+

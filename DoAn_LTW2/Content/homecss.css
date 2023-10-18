@@ -1,0 +1,36 @@
+﻿
+.tc {text-decoration: none;}
+.img-2, .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .caption {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-sign {
+    height: 100px;
+    position: relative;
+}
+
+.caption1 {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.pos-btn {
+    position: absolute;
+    top: 25%;
+    right: 22%;
+}

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Originals";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/Content/homecss.css" rel="stylesheet" />
+<div class="banner p-2">
+    <img src="~/Content/hinhanh/manwithdumbbells.jpg" alt="Banner Image">
+    <div class="caption">
+        Chúng tôi đã đem đến một thương hiệu Originals cho thế giới <br />
+        Bạn đã trao lại cho chúng tôi hàng ngàn phiên bản
+        <br />
+        <button type="button" id="btnCollection" class="btn btn_bst btn-secondary btn-lg mt-2">Đến bộ sưu tập <i class="fas fa-arrow-right"></i></button>
+    </div>
+</div>
+<div class="container-fluid banner-2 mb-2">
+    <h2 class="mt-4">BẠN ĐANG MUA SẮM CHO AI?</h2>
+    <div class="row">
+        <div class="col-4"><img class="img-2" src="~/Content/hinhanh/women.jpg" alt="women" /></div>
+        <div class="col-4"><img class="img-2" src="~/Content/hinhanh/men.jpg" alt="Men" /></div>
+        <div class="col-4"><img class="img-2" src="~/Content/hinhanh/kid.jpg" alt="Kid" /></div>
+    </div>
+    <div class="row">
+        <div class="col-4"><h5>Women</h5></div>
+        <div class="col-4"><h5>Men</h5></div>
+        <div class="col-4"><h5>Kids</h5></div>
+    </div>
+</div>
+<div class="container-fluid bg-warning form-sign mb-4">
+    <div class="caption1">TRỞ THÀNH HỘI VIÊN & HƯỞNG ƯU ĐÃI 15%</div>
+    <button type="button" id="btnSignUp" class="btn btn_bst btn-dark btn-lg mt-2 pos-btn">Đăng kí miễn phí <i class="fas fa-arrow-right"></i></button>
+</div>
+<script>
+ $(document).ready(function () {
+    $('#btnCollection').click(function () {
+        window.location.href = '@Url.Action("Collection", "BoSuuTap")';
+    });
+});
+ $(document).ready(function () {
+    $('#btnSignUp').click(function () {
+        window.location.href = '@Url.Action("Register", "Account")';
+    });
+});
+</script>
+

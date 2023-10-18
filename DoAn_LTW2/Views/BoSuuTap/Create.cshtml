@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Create Product";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Thêm sản phẩm</h2>
+<form action="/BoSuuTap/Create" method="post">
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="image">Product Image</label>
+            <input type="file"
+                   class="form-control"
+                   id="image"
+                   name="image" placeholder="Product Price" />
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="ProductName">Product Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="ProductName"
+                   name="ProductName" value="" placeholder="Product Name" />
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="ProductName">Price</label>
+            <input type="number"
+                   class="form-control"
+                   id="Price"
+                   name="Price" value="" placeholder="Product Price" />
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-md-6">
+            <label for="ProductName">Product Description</label>
+            <input type="text"
+                   class="form-control"
+                   id="Description"
+                   name="Description" value="" placeholder="Product Description" />
+        </div>
+    </div>
+    <div class="p-4">
+    <button type="submit" class="btn btn-success">Add</button>
+    <a href="/BoSuuTap/Collection" class="btn btn-danger">Cancel</a>
+    </div>
+</form>
+
